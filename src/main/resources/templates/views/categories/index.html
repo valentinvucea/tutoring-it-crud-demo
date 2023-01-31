@@ -20,23 +20,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row" class="text-center">1</th>
-                                <td>Category A</td>
-                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</td>
-                                <td class="text-center">View Edit Delete</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-center">2</th>
-                                <td>Category B</td>
-                                <td>Et harum quidem rerum facilis est et expedita distinctio</td>
-                                <td class="text-center">View Edit Delete</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-center">3</th>
-                                <td>Larry</td>
-                                <td>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit</td>
-                                <td class="text-center">View Edit Delete</td>
+                            <tr th:each="category : ${categories}">
+                                <th scope="row" class="text-center" th:text="${category.id}"></th>
+                                <td th:text="${category.name}"></td>
+                                <td th:text="${category.details}"></td>
+                                <td class="text-center">...</td>
                             </tr>
                         </tbody>
                     </table>

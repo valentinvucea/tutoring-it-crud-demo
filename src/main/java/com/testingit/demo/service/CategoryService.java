@@ -1,7 +1,6 @@
 package com.testingit.demo.service;
 
 import java.util.List;
-
 import com.testingit.demo.model.Category;
 
 public interface CategoryService {
